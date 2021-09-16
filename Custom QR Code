@@ -1,0 +1,15 @@
+import qrcode
+
+import image
+
+data = 'My name is Abhishek'. # Data you want to store.
+
+qr= qrcode.QRCode(version= 1,box_size=15,border=10)
+
+qr.add_data(data)
+
+qr.make(fit=True)
+
+img = qr.make_image(fill_color = 'blue', back_color='white') # Custom color, size.
+
+img.save('/Users/abhishekcn/Desktop/MyCustomQRcode.png'). # Location of the QR Code where you want to store.
